@@ -14,10 +14,11 @@
 
   <body>
    <% if flash.present? %>
+      <br> <br> <br> <br> <br> <br>
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
           
               <% flash.each do |key, value| %>
-                <%= content_tag(:div, value, class: "#{key}") %>
+                <%= content_tag(:div, value, class: "#{key} text-center") %>
             <% end %>
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>

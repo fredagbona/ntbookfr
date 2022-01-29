@@ -1,0 +1,13 @@
+<p>Hello <%= @email %>!</p>
+
+<% if @resource.try(:unconfirmed_email?) %>
+  <p>Nous vous contactons pour vous informer que votre adresse e-mail est veut être remplacée par <%= @resource.unconfirmed_email %>.</p>
+<% else %>
+  <p>Nous vous contactons pour vous informer que votre adresse e-mail a été remplacée par <%= @resource.email %>.</p>
+<% end %>
+
+
+<br><br>
+<p>N'hésitez pas à nous faire part de vos avis sur l'application qui jusqu'à maintenant subit des modifications et est disponible en version bêta </p>
+<p> Faites nous un retour par mail, notre équipe s'en chargera, merci !!! </p>
+<p> Cordialement, <br> <a href="https://calendly.com/fredagbona"> FredTheDev </a> </p>

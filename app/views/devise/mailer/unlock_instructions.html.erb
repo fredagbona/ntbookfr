@@ -1,0 +1,12 @@
+<p>Hello <%= @resource.email %>!</p>
+
+<p>Votre compte a été verrouillé en raison d'un nombre excessif de tentatives de connexion infructueuses.</p>
+
+<p>Cliquez sur le lien ci-dessous pour déverrouiller votre compte :</p>
+
+<p><%= link_to 'Déverouiller mon compte', unlock_url(@resource, unlock_token: @token) %></p>
+
+<br><br>
+<p>N'hésitez pas à nous faire part de vos avis sur l'application qui jusqu'à maintenant subit des modifications et est disponible en version bêta </p>
+<p> Faites nous un retour par mail, notre équipe s'en chargera, merci !!! </p>
+<p> Cordialement, <br> <a href="https://calendly.com/fredagbona"> FredTheDev </a> </p>

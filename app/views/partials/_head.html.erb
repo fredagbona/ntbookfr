@@ -1,0 +1,73 @@
+<% if user_signed_in? %>       
+          
+             <nav class="navbar navbar-light bg-light fixed-top">
+              <div class="container-fluid ">
+                <a class="navbar-brand" href="#">NoteBook</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><%= current_user.name %></h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/homes/index">Acceuil</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Mon profil</a>
+                      </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Mes notes</a>
+                      </li>
+                      <li class="nav-item">
+                        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
+                      </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="/homes/faq"> F.A.Q</a>
+                      </li>
+                     
+                     
+                    </ul>
+                    
+                  </div>
+                </div>
+              </div>
+            </nav>
+<% else %>
+       <nav class="navbar navbar-light bg-warning fixed-top">
+              <div class="container-fluid">
+                <a class="navbar-brand text-white fs-2" href="#">NoteBook</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/homes/index">Acceuil</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/users/sign_up">S'inscrire</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/users/sign_in">Se connecter</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/homes/faq"> F.A.Q</a>
+                      </li>
+                     
+                    </ul>
+                  
+                  </div>
+                </div>
+              </div>
+            </nav>
+
+<% end %>

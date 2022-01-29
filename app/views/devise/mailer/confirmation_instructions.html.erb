@@ -1,0 +1,10 @@
+<p>Bienvenue sur <b>NoteBook</b> <%= @email %>!</p>
+
+<p>Vous pouvez confirmer votre compte avec le lien suivant :</p>
+
+<p><%= link_to 'Confirmer mon compte', confirmation_url(@resource, confirmation_token: @token) %></p>
+
+<br><br>
+<p>N'hésitez pas à nous faire part de vos avis sur l'application qui jusqu'à maintenant subit des modifications et est disponible en version bêta </p>
+<p> Faites nous un retour par mail, notre équipe s'en chargera, merci !!! </p>
+<p> Cordialement, <br> <a href="https://calendly.com/fredagbona"> FredTheDev </a> </p>

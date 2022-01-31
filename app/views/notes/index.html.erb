@@ -3,7 +3,8 @@
     <h1 class="text-white text-center">Notes</h1>
 </section>
 
-<section class="container">
+<section class="container-fluid">
+  <div class="col-auto">
     <% if(current_user.notes ) %>
           <table class="table table-warning table-hover">
         <thead>
@@ -36,7 +37,7 @@
 
     <% end %>
       <br>
-
+  </div>
       <%= link_to 'Créer une note', new_note_path , class: "btn btn-success  w-100 text-light"%>
 </section>
 <br><br><br><br>

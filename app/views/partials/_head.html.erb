@@ -17,10 +17,13 @@
                         <a class="nav-link active" aria-current="page" href="/homes/index">Acceuil</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Mon profil</a>
+                        <a class="nav-link" href="/profile/index">Mon profil</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/notes">Mes notes</a>
                       </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Mes notes</a>
+                        <a class="nav-link" href="/notes/new">Créer une note</a>
                       </li>
                       <li class="nav-item">
                         <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>

@@ -1,0 +1,43 @@
+<br><br><br><br>
+<section class="container-fluid bg-warning">
+    <h1 class="text-white text-center">Notes</h1>
+</section>
+
+<section class="container">
+    <% if(current_user.notes ) %>
+          <table class="table table-warning table-hover">
+        <thead>
+          <tr>
+            <th class="text-center">Title</th>
+            <th class="text-center">Description</th>
+            <th ></th>
+             <th ></th>
+              <th ></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @notes.each do |note| %>
+            <tr>
+              <td><%= note.title %></td>
+              <td><%= note.description.first(10) ... %></td>
+              <td><%= link_to note, title: "Show" do %> <i class="bi bi-eye" style="color: blue;" ></i>
+                              <% end %> </td>
+              <td><%= link_to edit_note_path(note), title: "Edit" do %> <i class="bi bi-pencil" style="color: green;"> </i>
+                              <% end %> </td>
+              <td><%= link_to note, title: "Supprimer", method: :delete, data: { confirm: 'Are you sure?' } do  %> <i class="bi bi-trash" style="color: red;"> </i>
+                              <% end %>  </td>
+            </tr>
+          <% end %>
+        </tbody> <i class="bi bi-pencil"></i>
+      </table>
+    <% else %>
+        <h2 class="text-center"> Vous n'avez aucune note </h2>
+
+    <% end %>
+      <br>
+
+      <%= link_to 'Créer une note', new_note_path , class: "btn btn-success  w-100 text-light"%>
+</section>
+<br><br><br><br>
+
